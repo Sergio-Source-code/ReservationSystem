@@ -1,8 +1,8 @@
-# Restaurant Dining Reservation Web Application for COSC 4351
+# Restaurant Dining Reservation Web Application
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+As required in your Fundamentals of Software Engineering class (COSC 4351), you are to design a dining reservation web application. Hence, the creation of this repository. This project consists of three individuals. We'll be using Next JS for our front-end and MongoDB (or Firebase) as our query language. 
 
-## Getting Started
+## Cloning the Repository:
 
 First, run the development server:
 
