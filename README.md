@@ -14,7 +14,7 @@ Cloning the repository is how you take the contents of the code here and place i
   </kbd>
 </p>
 
-Then go to the page of the Github repository that you wish to collaborate with (in this case we use this [repository](https://github.com/Sergio-Source-code/ReservationSystem/)). Click the following link:
+Then go to the page of the Github repository that you wish to collaborate with (in this case we use this [repository](https://github.com/Sergio-Source-code/ReservationSystem/)). After going to that repository site, click on the following button that says `code`:
 
 <p align = "center">
   <kbd>
@@ -24,6 +24,6 @@ Then go to the page of the Github repository that you wish to collaborate with (
   </kbd>
 </p>
   
-Then click on HTML
+Then copy the contents under the tab `HTTPS` of the element that pops up:
 
 ## What is the purpose of each file in this Next JS project?:
