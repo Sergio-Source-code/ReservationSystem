@@ -38,18 +38,26 @@ Then copy the contents under the tab `HTTPS` of the element that pops up:
 
 Here, we have the following file structure:
 ```
-📁 components
-📁 pages
-📁 public
-📁 styles
-📜 .eslintrc.json
-📜 .next.config.js
-📜 package.json
-📜 .gitinore
-📜 package-lock.json
+📦 Reservation System
+└─── 📁 components
+└─── 📁 pages
+|    | 📜 _app.js
+|    | 📜 index.js
+|
+└─── 📁 public
+└─── 📁 styles
+|    | 📜 globals.css
+|
+| 📜 .eslintrc.json
+| 📜 .next.config.js
+| 📜 package.json
+| 📜 .gitinore
+| 📜 package-lock.json
 ```
 
 We only have to worry about the folders:
+- The `📁 components` folder is for reusable components. For example, a footer is to be render in every page. Thus, we create a footer component and store it there.
+- The `📁 pages` folder is to store our pages for our website. We note that a `📜 about-us.js` page, because one of the pages of the website is an "about-us" page. Note, there are two files that are slightly different. That is the `📜 _app.js` file and the `📜 index.js` file. The `📜 _app.js` file is where we import our components from the `📁 components` folder and place them there. Any code in there would render to all pages of our Next.js project.
 
 ## Pushing Code to the Repository:
 
