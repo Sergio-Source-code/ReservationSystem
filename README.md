@@ -26,4 +26,12 @@ Then go to the page of the Github repository that you wish to collaborate with (
   
 Then copy the contents under the tab `HTTPS` of the element that pops up:
 
+<p align = "center">
+  <kbd>
+    <picture>
+      <img src = "https://user-images.githubusercontent.com/78463059/192170312-3b833136-2e37-4ca5-a4f9-04272bc91128.png" />
+    </picture>
+  </kbd>
+</p>
+
 ## What is the purpose of each file in this Next JS project?:
