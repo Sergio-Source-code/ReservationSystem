@@ -11,9 +11,9 @@ Cloning the repository is how you take the contents of the code here and place i
 Then go to the page of the Github repository that you wish to collaborate with. Click the following link:
 
 <p align = "center">
-  <kdb>
+  <kbd>
     <img src = "https://user-images.githubusercontent.com/78463059/192163494-92f4c850-b1e1-4ea7-a4a5-4b22d1e08e40.png" />
-  </kdb>
+  </kbd>
 </p>
   
 Then click on HTML
