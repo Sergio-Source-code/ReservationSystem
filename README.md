@@ -8,7 +8,7 @@ Cloning the repository is how you take the contents of the code here and place i
 
 <p align = "center">
   <kbd>
-    <img src = "https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png" />
+    <img src = "https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png" cursor = "none" />
   </kbd>
 </p>
 
