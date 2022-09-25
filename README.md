@@ -6,9 +6,13 @@ As required in your Fundamentals of Software Engineering class (COSC 4351), you 
 
 Cloning the repository is how you take the contents of the code here and place it in your Visual Studio Editor. To do so, start visual studios. Then, on the left hand side, click *Clone Git Repository*:
 
-![image](https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png)
+<p align = "center">
+  <kbd>
+    <img src = "https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png" />
+  </kbd>
+</p>
 
-Then go to the page of the Github repository that you wish to collaborate with. Click the following link:
+Then go to the page of the Github repository that you wish to collaborate with (in this case . Click the following link:
 
 <p align = "center">
   <kbd>
