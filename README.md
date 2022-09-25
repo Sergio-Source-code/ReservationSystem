@@ -8,7 +8,7 @@ Cloning the repository is how you take the contents of the code here and place i
 
 <p align = "center">
   <kbd>
-    <img src = "https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png" cursor = "none" />
+    <img src = "https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png" />
   </kbd>
 </p>
 
@@ -16,7 +16,9 @@ Then go to the page of the Github repository that you wish to collaborate with (
 
 <p align = "center">
   <kbd>
-    <img src = "https://user-images.githubusercontent.com/78463059/192163494-92f4c850-b1e1-4ea7-a4a5-4b22d1e08e40.png" />
+    <picture>
+      <img src = "https://user-images.githubusercontent.com/78463059/192163494-92f4c850-b1e1-4ea7-a4a5-4b22d1e08e40.png" />
+    </picture>
   </kbd>
 </p>
   
