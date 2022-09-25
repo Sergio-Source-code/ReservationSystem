@@ -5,9 +5,13 @@ As required in your Fundamentals of Software Engineering class (COSC 4351), you 
 ## Cloning the Repository:
 
 Cloning the repository is how you take the contents of the code here and place it in your Visual Studio Editor. To do so, start visual studios. Then, on the left hand side, click *Clone Git Repository*:
+
 ![image](https://user-images.githubusercontent.com/78463059/192163325-6df6fdb6-1207-47f8-9c8b-52ae550ea42c.png)
+
 Then click the following button from GitHub:
+
 ![image](https://user-images.githubusercontent.com/78463059/192163494-92f4c850-b1e1-4ea7-a4a5-4b22d1e08e40.png)
+
 Then click on HTML
 
 ## What is the purpose of each file in this Next JS project?:
