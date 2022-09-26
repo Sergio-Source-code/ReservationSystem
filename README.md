@@ -62,3 +62,5 @@ We only have to worry about the folders:
 ## Pushing Code to the Repository:
 
 For this project, we have opted **not** to use branching. This could create issues, and has a high development risk for unsynchronized projects. However, since we have a small teams, we would emphasize that individuals `pull` before `push`.
+
+Thus, let's say an individual has finished writing a code for some file. How does that indidivudal push to github?
