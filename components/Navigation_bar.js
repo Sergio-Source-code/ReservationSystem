@@ -2,6 +2,7 @@
 import { render } from "react-dom";
 import Link from 'next/link'
 
+
 // Packages to Import:
 
 // Main Function Component:
@@ -14,12 +15,12 @@ export default function NavigationBar() {
             <ul>
                 <li>
                     <Link href = "#">
-                        <button>  Name of Our Restaurant </button>
+                        <button> The Royal Kitchen </button>
                     </Link>
                 </li>
                 <li>
                     <Link href = "/reserve_a_seat">
-                        <button> Reserve a Seat </button>
+                        <button> Reserve a Table </button>                    
                     </Link>
                 </li>
                 <li>
