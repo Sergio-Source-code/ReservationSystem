@@ -14,10 +14,6 @@ export default function NavigationBar() {
     return (
         <nav id = "navigation_bar">
             <ul>
-
-                <li className={styles.callButton}>
-                    <Image src="/img/Restaurant.png" alt="" />
-                </li>
                 <li>
                     <Link href = "#">
                         <button> The Royal Kitchen </button>
