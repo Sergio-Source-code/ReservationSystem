@@ -1,7 +1,8 @@
 // File Description: This file is for your navigation bar.
 import { render } from "react-dom";
 import Link from 'next/link'
-
+import Image from "next/image";
+import styles from "../styles/NavigationBar.module.css"
 
 // Packages to Import:
 
@@ -13,11 +14,16 @@ export default function NavigationBar() {
     return (
         <nav id = "navigation_bar">
             <ul>
+
+                <li className={styles.callButton}>
+                    <Image src="/img/Restaurant.png" alt="" />
+                </li>
                 <li>
                     <Link href = "#">
                         <button> The Royal Kitchen </button>
                     </Link>
                 </li>
+
                 <li>
                     <Link href = "/reserve_a_seat">
                         <button> Reserve a Table </button>                    
@@ -38,6 +44,7 @@ export default function NavigationBar() {
                         <button> Careers </button>
                     </Link>
                 </li>
+                
             </ul>
         </nav>
     );
