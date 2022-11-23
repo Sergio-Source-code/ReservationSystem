@@ -22,7 +22,7 @@ export default function NavigationBar() {
 
                 <li>
                     <Link href = "/reserve_a_seat">
-                        <button> Reserve a Table </button>                    
+                        <button> Reserve a Table </button>                  
                     </Link>
                 </li>
                 <li>

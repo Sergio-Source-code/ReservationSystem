@@ -1,13 +1,15 @@
 // File Description: This page is designed to load all the content/components in all other pages:
 
 // Packages to Import
-import '../styles/globals.css'
-import NavigationBar from '../components/Navigation_bar'
+import Layout from "../components/Layout";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return (  
-    <NavigationBar/>
-  )
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
-export default MyApp
+export default MyApp;
