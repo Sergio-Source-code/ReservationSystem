@@ -1,8 +1,9 @@
-export default function Booking(){
-    return (
+import { Booking } from '../components/booking';
+
+export default function booking(){
+  return(
     <div>
-        welcome
+        <Booking />
     </div>
-    
-    )
+  )
 }

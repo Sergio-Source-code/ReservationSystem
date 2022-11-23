@@ -11,7 +11,7 @@ export default function Home() {
         <meta name="description" content="Best Thai food in Houston" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Image src={img} alt='/' priority />
+      <Image src={img} alt='/' objectFit="cover" />
 
     </div>
   );

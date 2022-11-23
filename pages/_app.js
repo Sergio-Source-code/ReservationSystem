@@ -2,6 +2,7 @@
 
 // Packages to Import
 import Layout from "../components/Layout";
+import NavigationBar from "../components/Navigation_bar";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
