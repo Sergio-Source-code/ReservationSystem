@@ -16,3 +16,21 @@ a {
 }
 
 /* Reusable Components Styling: */
+.main_template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navigation_bar {
+  width: 100vw;
+}
+
+#navigation_bar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0px;
+  text-decoration: none;
+  list-style-type: none;
+}

@@ -14,7 +14,7 @@ export default function NavigationBar() {
             <ul>
                 <li>
                     <Link href = "#">
-                        <button>  Name of Our Restaurant </button>
+                        <button> Tejun </button>
                     </Link>
                 </li>
                 <li>
