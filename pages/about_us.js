@@ -6,7 +6,7 @@
 export default function AboutUs() {
     return (
         <main className = "main_template">
-            <p> We have been serving since 1975! </p>
+            <p>We have been serving since 1975!</p>
         </main>
     );
   }
