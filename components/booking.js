@@ -1,7 +1,8 @@
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
+import connectDB from '../middleware/mongodb';
+import User from '../models/reservation';
 
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -26,7 +27,20 @@ export const Booking = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    fetch('/api/reservations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => {
+      if (response.status == 200){
+        console.log("Table reserved!")
+      } else {
+        console.log("Reservation failed");
+      }
+    })
   };
 
   const [startDate, setStartDate] = useState(new Date());
