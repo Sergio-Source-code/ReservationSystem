@@ -1,16 +1,12 @@
 import connectDB from '../../middleware/mongodb';
-import Reservation from '../../models/reservation';
+import User from '../../models/user';
 
 const handler = async (req, res) => {
   if (req.method === 'POST') {
     try {
-      var reservation = new Reservation(req.body);
-
-      // add logic to attempt reservation
-      // throw error if not possible
-
-      var reservationCreated = await reservation.save();
-      return res.status(200).send(reservationCreated);
+      var user = new User(req.body);
+      var userCreated = await user.save();
+      return res.status(200).send(userCreated);
     } catch (error) {
       return res.status(500).send(error.message);
     }
