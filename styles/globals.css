@@ -1,22 +1,17 @@
-html,
+/* Fonts to Include */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@font-face {
+  font-family: Bellada;
+  src: url("/fonts/Bellada.ttf") format("opentype"); /* Using custom font NON-Google */
+}
+
+/* Preprocessing CSS */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Raleway', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0px;
+  margin: 0px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
-/* Reusable Components Styling: */
+/* Styling for Navigation Bar */
 .main_template {
   display: flex;
   justify-content: center;
@@ -24,14 +19,204 @@ a {
 }
 
 #navigation_bar {
-  width: 100vw;
+  padding: 2vh;;
+  display: flex;
+  border-bottom: 1px solid black;
+  height: 10vh;
 }
 
-#navigation_bar ul {
+#navigation_bar button {
+  cursor: pointer; /* So when user hovers over, they know it's a button. */
+  background-color: white;
+}
+
+#homepage_navigation {
+  width: 70%; /* Subtracting the padding of navigation element. */
+}
+
+#side_navigations {
+  width: 30%; /* Subtracting the padding of navigation element. */
+  display: flex;
+  align-items: center;
+}
+
+#logo_div {
+  display: flex;
+  align-items: center;
+}
+
+#logo_div button {
+  margin-left: 2vw;
+}
+
+#logo_div h1 {
+  font-family: 'Bellada', sans-serif;
+}
+
+#side_navigations ul {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-  padding: 0px;
-  text-decoration: none;
+  margin: 0px;
   list-style-type: none;
+  justify-content: space-evenly;
+  padding: 0px;
+}
+
+#navigation_bar button {
+  border: none;
+  padding: 8px;
+}
+
+#navigation_bar button:hover {
+  color: #d3d3d3;
+}
+
+#logo_button:hover {
+  color: black !important;
+}
+
+#sign_in_button {
+  border-radius: 5px;
+  border: 2px solid black !important;
+}
+
+/* Styling for Footer */
+footer {
+  padding: 10px;
+  border-top: 1px solid black;
+  text-align: center;
+  height: 5vh;
+}
+
+/* Main Content */
+.homepage_banner {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  align-items: center;
+  background-image: url('/img/Homepage_Banner.jpg');
+  background-size: cover; /* Resolution won't look nice, but chances of monitor being this big are slim. Will stretch image to fit the div. */
+  border-bottom: 1px solid black;
+}
+
+.centered_text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.centered_text h1, .centered_text h2, .centered_text h3, .centered_text p {
+  margin: 1vh;
+  color: white;
+}
+
+.specials {
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  border-bottom: 1px solid black;
+}
+
+.next_js_image_container {
+  position: relative;
+  height: 90%;
+  width: 60%;
+}
+
+.menu_highlights {
+  padding: 25px;
+  background-image: url("/img/Stitched_Background.jpg");
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu_highlights h1 {
+  margin: 1vh;
+}
+
+.menu_highlights_grid {
+  height: 80%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "appetizer appetizer beverages beverages beverages"
+    "appetizer appetizer beverages beverages beverages"
+    "entrees entrees entrees desserts desserts"
+    "entrees entrees entrees desserts desserts";
+  color: white;
+}
+
+.grid_area_one {
+  grid-area: appetizer;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/img/Appetizer.jpeg');
+  background-size: cover;
+}
+
+.grid_area_two {
+  grid-area: beverages;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/img/Beverages Image.jpg');
+  background-size: cover;
+}
+
+.grid_area_three {
+  grid-area: entrees;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/img/Entrees.jpg');
+  background-size: cover;
+}
+
+.grid_area_four {
+  grid-area: desserts;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/img/Desserts Image.jpg');
+  background-size: cover;
+}
+
+/* Reservation Page Styling */
+.reservation_page {
+  height: 80vh;
+  background-image: url('/img/Booking-Background.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reservation_page h1, .reservation_page h2 {
+  margin: 0.5vh;
+  color: white;
+}
+
+#reservation_form {
+  height: 50%;
+  width: 25%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 7px;
 }

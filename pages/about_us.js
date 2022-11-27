@@ -6,7 +6,6 @@
 export default function AboutUs() {
     return (
         <main className = "main_template">
-            <p> Hello World </p>
             <p> Tejun Crumb is all about trying new things and mixing unique blends.
                 We are formed by a group of three chefs with unique cultural backgrounds and heavily influenced by the cajun cooking in the Gulf areas, and particularly in New Orleans.
                 We have gave birth to popular world reknown dishes, such as the Vietnamese BoPoy. 

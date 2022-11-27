@@ -1,7 +1,8 @@
+// This is the form to book our booking:
+
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
 
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
