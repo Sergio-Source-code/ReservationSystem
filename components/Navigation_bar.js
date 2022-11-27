@@ -1,8 +1,10 @@
 // File Description: This file is for your navigation bar.
-import { render } from "react-dom";
-import Link from 'next/link'
 
 // Packages to Import:
+import { render } from "react-dom";
+import Link from 'next/link'
+import Image from "next/image";
+import styles from "../styles/NavigationBar.module.css"
 
 // Main Function Component:
 export default function NavigationBar() {
@@ -14,12 +16,13 @@ export default function NavigationBar() {
             <ul>
                 <li>
                     <Link href = "#">
-                        <button> Tejun </button>
+                        <button> The Royal Kitchen </button>
                     </Link>
                 </li>
+
                 <li>
                     <Link href = "/reserve_a_seat">
-                        <button> Reserve a Seat </button>
+                        <button> Reserve a Table </button>                  
                     </Link>
                 </li>
                 <li>
@@ -37,6 +40,7 @@ export default function NavigationBar() {
                         <button> Careers </button>
                     </Link>
                 </li>
+                
             </ul>
         </nav>
     );
