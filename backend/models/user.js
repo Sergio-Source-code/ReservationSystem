@@ -1,9 +1,13 @@
 // File Description: This is the user schema.
 
-import mongoose from 'mongoose';
+// Require Mongoose:
+const mongoose = require('mongoose');
+
+// Create Schema Instance:
 var Schema = mongoose.Schema;
 
-var user = new Schema({
+// Define Schema:
+const UserSchema = new Schema({
   firstName: {
     type: String,
     required: true
@@ -20,10 +24,7 @@ var user = new Schema({
     type: String,
     required: true
   }
-});
+}, {timestamps: true});
 
-mongoose.models = {};
-
-var User = mongoose.model('User', user);
-
-export default User;
+// Creating the Model:
+module.exports = mongoose.model('User', UserSchema);

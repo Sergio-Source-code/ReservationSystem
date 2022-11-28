@@ -1,7 +1,13 @@
-import mongoose from 'mongoose';
+// File Description: This is the reservation schema:
+
+// Require Mongoose:
+const mongoose = require('mongoose');
+
+// Create Schema Instance:
 var Schema = mongoose.Schema;
 
-var reservation = new Schema({
+// Define Schema:
+const ReservationSchema = new Schema({
   firstName: {
     type: String,
     required: true
@@ -26,10 +32,7 @@ var reservation = new Schema({
     type: Date,
     default: Date.now
   }
-});
+}, {timestamps: true});
 
-mongoose.models = {};
-
-var Reservation = mongoose.model('Reservation', reservation);
-
-export default Reservation;
+// Creating the Model:
+module.exports = mongoose.model('Reservation', ReservationSchema);
