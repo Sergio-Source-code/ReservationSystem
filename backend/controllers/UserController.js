@@ -13,7 +13,7 @@ const createUser = async (req, res) => {
 
     // Try to Create a New User Document:
     try {
-        const user = await User.create({firstName, lastName, email, password});
+        const user = await User.create(req.body);
         res.status(200).json(user); // Send back user document.
     } catch (error) {
         res.status(400).json({error: error.message}); // Send back a error code and message.

@@ -10,7 +10,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <ConnectDB />
+      {/* <ConnectDB /> */}
       <NavigationBar />
       <Component {...pageProps} /> {/* Renders other pages. */}
       <Footer />

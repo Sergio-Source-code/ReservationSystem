@@ -10,6 +10,7 @@ app = express(); // Invoking express app.
 
 // We import all route logistics for handling user registration and table registrations here:
 const usersRoutes = require('./routes/users');
+const reservationRoutes = require('./routes/tableReservations')
 
 // Middlewares that aren't route handlers:
 app.use(express.json()); // Middleware to see if request to route has a body, and if it does parse the body so that we can send body details to server.
@@ -24,7 +25,10 @@ app.use((req, res, next) => {
 
 // We use route logistics for handling user registration and table registrations here (we use the things we imported):
 app.use('/api/users', usersRoutes);
+app.use('/api/reservations', reservationRoutes);
 
+// app.listen(3000);
+// console.log("testing")
 // Make the express app listen to server:
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {

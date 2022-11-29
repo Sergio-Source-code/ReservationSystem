@@ -7,7 +7,7 @@ export default function OurMenu() {
             <p> This is our menu: </p>
             <ol>
                 <li>
-                    Crumb's Calamari
+                    Crumb&apos;s Calamari
                 </li>
                 <li>
                     Creole Fried Pickles
@@ -70,7 +70,7 @@ export default function OurMenu() {
                     Southern Crab Beignets
                 </li>
                 <li>
-                    Crumb's Banana Foster
+                    Crumb&apos;s Banana Foster
                 </li>
                 <li>
                     Fried Icecream

@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </section>
       <section className='specials'>
-        <h2> Today's Special(s): 50% Off Pad Thai Nachos </h2> 
+        <h2> Today&apos;s Special(s): 50% Off Pad Thai Nachos </h2> 
       </section>
       <section className='menu_highlights'>
         <h1> Menu Highlights </h1>

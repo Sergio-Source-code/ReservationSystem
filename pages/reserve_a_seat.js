@@ -24,7 +24,7 @@ export default function ReserveASeat() {
   return (
     <main className="main_class reservation_page">
         <h1> Reserve a Seat With Us! </h1>
-        <h2> We're glad to have you dine with us! </h2>
+        <h2> We&apos;re glad to have you dine with us! </h2>
         <form method = "POST" id = "reservation_form">
             <label for = "first_name"> First Name: </label>
             <input type = "text" name = "first_name" required />

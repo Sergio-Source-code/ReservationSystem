@@ -28,6 +28,20 @@ export const Booking = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    fetch('/api/reservations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => {
+      if (response.status == 200){
+        console.log("Table reserved!")
+      } else {
+        console.log("Reservation failed");
+      }
+    })
   };
 
   const [startDate, setStartDate] = useState(new Date());
