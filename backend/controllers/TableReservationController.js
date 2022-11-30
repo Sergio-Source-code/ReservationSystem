@@ -1,10 +1,5 @@
-// import connectDB from '../../middleware/mongodb';
 const Reservation = require('../models/reservation.js');
 const Table = require('../models/table.js');
-const mongoose = require('mongoose');
-
-// Models to Import:
-const Reservation = require('../models/reservation.js');
 const mongoose = require('mongoose');
 
 // Create a Reservation:
