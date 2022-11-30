@@ -220,3 +220,77 @@ footer {
   padding: 15px;
   border-radius: 7px;
 }
+
+#user_alert_for_registration {
+  display: none;
+  background-color: bisque;
+  color: black;
+  position: fixed;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#user_alert_for_registration h2 {
+  color: black;
+}
+
+/* Menu Page Styling */
+.menu_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#menu {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "appetizers image_one"
+    "image_two entrees"
+    "sides image_three"
+    "image_four desserts";
+}
+
+#appetizers {
+  grid-area: appetizers;
+}
+
+#entrees {
+  grid-area: entrees;
+}
+
+#sides {
+  grid-area: sides;
+}
+
+#desserts {
+  grid-area: desserts;
+}
+
+#image_one_right_container {
+  grid-area: image_one;
+  position: relative;
+  justify-self: flex-start;
+}
+
+#image_two_left_container {
+  grid-area: image_two;
+  position: relative;
+  justify-self: flex-end;
+}
+
+#image_three_right_container {
+  grid-area: image_three;
+  position: relative;
+  justify-self: flex-start;
+}
+
+#image_four_left_container {
+  grid-area: image_four;
+  position: relative;
+  justify-self: flex-end;
+}

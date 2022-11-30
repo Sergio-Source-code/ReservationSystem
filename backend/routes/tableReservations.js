@@ -15,5 +15,9 @@ const tableReservationRouter = express.Router();
 // Register/Post a Reservation:
 tableReservationRouter.post('/', createReservation);
 
+// Get all Registrations:
+
+// Get a specific Registration:
+
 // Export Users
 module.exports = tableReservationRouter;

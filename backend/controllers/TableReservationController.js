@@ -3,6 +3,11 @@ const Reservation = require('../models/reservation.js');
 const Table = require('../models/table.js');
 const mongoose = require('mongoose');
 
+// Models to Import:
+const Reservation = require('../models/reservation.js');
+const mongoose = require('mongoose');
+
+// Create a Reservation:
 const createReservation = async (req, res) => {
   try {
     const reservation = await Reservation.create(req.body);
@@ -29,6 +34,9 @@ const createReservation = async (req, res) => {
     return res.status(500).send(error.message);
   }
 };
+
+// Get The Amount of Reservations for a Day:
+
 
 module.exports = {
     createReservation

@@ -5,6 +5,10 @@ const User = require('../models/user.js');
 const mongoose = require('mongoose');
 
 // Get all users:
+const getAllUser = async (req, res) => {
+    // Get all users:
+    
+};
 
 // Create a new user:
 const createUser = async (req, res) => {
