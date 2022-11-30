@@ -1,8 +1,8 @@
 // File description: This is the main/homepage file
 
 // Packages to Import:
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
 import React from 'react';
 
 // Home Component:

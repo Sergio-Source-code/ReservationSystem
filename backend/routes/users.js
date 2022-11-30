@@ -15,5 +15,9 @@ const userRouter = express.Router();
 // Register/Post a User:
 userRouter.post('/', createUser);
 
+// Get all users:
+
+// Get a specific user:
+
 // Export Users
 module.exports = userRouter;

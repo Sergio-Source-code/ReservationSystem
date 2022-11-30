@@ -11,6 +11,7 @@ import parse from 'html-react-parser';
 export default function ReserveASeat() {
   // Local Variables:
   var string = "<select name = 'number_of_guests' required>";
+  var isSignIn = false;
   
   // Local Functions:
   const outputNumberOfGuestFunction = () => {
@@ -19,7 +20,21 @@ export default function ReserveASeat() {
     }
     string += "</select>";
     return string;
-  }
+  } // Function to Render All 
+  const sign_in_or_not = () => {
+    return (
+        <div id = 'user_alert_for_registration'>
+        <h2> Would you like to sign in? </h2>
+        <fieldset>
+          <label for = 'sign_in_yes'> Yes </label>
+          <input type = 'radio' name = 'sign_in_or_not' value = 'yes' />
+          <label for = 'sign_in_yes'> No </label>
+          <input type = 'radio' name = 'sign_in_or_not' value = 'no' />
+          <input type = 'submit'></input>
+        </fieldset>
+      </div>
+    )
+  } // Template to prompt user to sign in.
 
   return (
     <main className="main_class reservation_page">
@@ -40,6 +55,7 @@ export default function ReserveASeat() {
             <input type = "date" name = "date" required />
             <label for = "time"> Desired Reservation Time: </label>
             <input type = "time" name = "time" value="08:30:00" step = "1800" required />
+            <input type = "radio" />
         </form>
     </main>
   )
