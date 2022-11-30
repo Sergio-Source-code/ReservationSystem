@@ -8,15 +8,13 @@ const mongoose = require('mongoose');
 
 // Create a new user:
 const createUser = async (req, res) => {
-    // Extract them from request body:
-    const {firstName, lastName, email, password} = req.body;
-
-    // Try to Create a New User Document:
     try {
         const user = await User.create(req.body);
-        res.status(200).json(user); // Send back user document.
+        const createdUser = await user.save();
+        console.log("Created user");
+        return res.status(200).json(createdUser);
     } catch (error) {
-        res.status(400).json({error: error.message}); // Send back a error code and message.
+        return res.status(400).json({error: error.message}); // Send back a error code and message.
     }
 };
 

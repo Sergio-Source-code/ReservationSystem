@@ -27,8 +27,7 @@ export const Booking = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
-    fetch('/api/reservations', {
+    fetch('http://localhost:4000/api/reservations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

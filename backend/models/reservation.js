@@ -21,12 +21,15 @@ const ReservationSchema = new Schema({
     required: true
   },
   numberOfGuests: {
-    type: String,
+    type: Number,
     required: true
   },
   phoneNumber: {
     type: String,
     required: true
+  },
+  tableNumber: {
+    type: Number
   },
   date: {
     type: Date,

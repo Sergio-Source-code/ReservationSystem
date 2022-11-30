@@ -8,6 +8,9 @@ require('dotenv').config(); // PORT and server details are hidden in the .env fi
 // Creating the express application:
 app = express(); // Invoking express app.
 
+let cors = require("cors");
+app.use(cors());
+
 // We import all route logistics for handling user registration and table registrations here:
 const usersRoutes = require('./routes/users');
 const reservationRoutes = require('./routes/tableReservations')
