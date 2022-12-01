@@ -14,10 +14,7 @@ const TableSchema = new Schema({
   size: {
     type: Number,
     required: true
-  },
-  reservedDates: {
-    type: [Number],
-  },
+  }
 }, {timestamps: true});
 
 module.exports = mongoose.model('Table', TableSchema);
