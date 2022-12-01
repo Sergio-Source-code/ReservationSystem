@@ -8,24 +8,57 @@ const createReservation = async (req, res) => {
     const reservation = await Reservation.create(req.body);
 
     // table reservation logic
+    var beginningOfDay = new Date(reservation.date.getTime());
+    beginningOfDay.setHours(0);
+    beginningOfDay.setMinutes(0);
+    beginningOfDay.setSeconds(0);
+    var endOfDay = new Date(reservation.date.getTime());
+    endOfDay.setHours(59);
+    endOfDay.setMinutes(59);
+    endOfDay.setSeconds(59);
     const reservedTables = await Reservation.find({date: {
-      $gt: reservation.date.getFullYear() + "-" + (reservation.date.getMonth() + 1) + "-" + reservation.date.getDate(),
-      $lt: reservation.date.getFullYear() + "-" + (reservation.date.getMonth() + 1) + "-" + reservation.date.getDate() + "T23:59:59.999"
+      $gt: beginningOfDay,
+      $lt: endOfDay
     }})
     const reservedTableIds = reservedTables.map(entry => {return entry.tableNumber;})
-    const table = await Table.findOne({id: { $nin: reservedTableIds}});
+    const table = await Table.findOne({id: { $nin: reservedTableIds}, size: { $gt: reservation.numberOfGuests }});
     if (table) {
       reservation.tableNumber = table.id;
       const createdReservation = await reservation.save();
-      console.log(createdReservation);
+      console.log("Reserved at table " + table.id);
       return res.status(200).send(createdReservation);
     } else {
-      throw Error("No available tables");
+      console.log("Could not find tables, trying to merge...");
+      const openTables = await Table.find({id: { $nin: reservedTableIds}});
+      var openTableId = -1;
+      var otherOpenTableId = -1;
+      openTables.every(openTable => {
+        const otherTableFound = openTables.find(otherTable => {
+          return openTable.id != otherTable.id && openTable.size + otherTable.size >= reservation.numberOfGuests;
+        })
+        if (otherTableFound) {
+          openTableId = openTable.id;
+          otherOpenTableId = otherTableFound.id;
+          return false;
+        }
+        return true;
+      })
+      if (openTableId != -1 && otherOpenTableId != -1) {
+        const secondReservation = await Reservation.create(req.body);
+        reservation.tableNumber = openTableId;
+        secondReservation.tableNumber = otherOpenTableId;
+        const createdReservation = await reservation.save();
+        const secondCreatedReservation = await secondReservation.save();
+        console.log("Reserved tables " + openTableId + " and " + otherOpenTableId);
+        return res.status(200).send({firstReservation: createdReservation, secondReservation: secondCreatedReservation});
+      } else {
+        console.log("Could not merge tables either");
+      }
     }
+    //
 
-    return res.status(500).send("Error reserving table");
+    throw Error("No available tables");
   } catch (error) {
-    console.log(error.message);
     return res.status(500).send(error.message);
   }
 };
