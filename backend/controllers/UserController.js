@@ -7,11 +7,15 @@ const mongoose = require('mongoose');
 // Get all users:
 const getAllUser = async (req, res) => {
     // Get all users:
-    
+    const users = await User.find();
+    return users;
 };
 
 // Create a new user:
 const createUser = async (req, res) => {
+    // Unpack body of request:
+
+
     try {
         const user = await User.create(req.body);
         const createdUser = await user.save();

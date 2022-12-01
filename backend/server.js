@@ -8,6 +8,7 @@ require('dotenv').config(); // PORT and server details are hidden in the .env fi
 // Creating the express application:
 app = express(); // Invoking express app.
 
+// Require Cors:
 let cors = require("cors");
 app.use(cors());
 
@@ -25,13 +26,10 @@ app.use((req, res, next) => {
     next();
 }); // Global Middleware to Log Request Path and Method:
 
-
 // We use route logistics for handling user registration and table registrations here (we use the things we imported):
 app.use('/api/users', usersRoutes);
 app.use('/api/reservations', reservationRoutes);
 
-// app.listen(3000);
-// console.log("testing")
 // Make the express app listen to server:
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
