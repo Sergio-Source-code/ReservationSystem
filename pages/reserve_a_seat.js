@@ -30,7 +30,7 @@ export default function ReserveASeat() {
           <input type = 'radio' name = 'sign_in_or_not' value = 'yes' />
           <label for = 'sign_in_yes'> No </label>
           <input type = 'radio' name = 'sign_in_or_not' value = 'no' />
-          <input type = 'submit'></input>
+          <input type = 'submit'> Continue &#62; </input>
         </fieldset>
       </div>
     )
@@ -55,7 +55,10 @@ export default function ReserveASeat() {
             <input type = "date" name = "date" required />
             <label for = "time"> Desired Reservation Time: </label>
             <input type = "time" name = "time" value="08:30:00" step = "1800" required />
-            <input type = "radio" />
+            <details><summary>No Show Policy</summary> Clients would be charged $50 for a no-show fee. </details>
+            <label for = "no_show_policy"> I've read the no-show policy! </label>
+            <input type = "checkbox" name = "no_show_policy"/>
+            <input type = "submit" value = "Submit"></input>
         </form>
     </main>
   )

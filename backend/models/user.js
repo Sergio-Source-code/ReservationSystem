@@ -2,6 +2,7 @@
 
 // Require Mongoose:
 const mongoose = require('mongoose');
+const { interpolateAs } = require('next/dist/shared/lib/router/router');
 
 // Create Schema Instance:
 var Schema = mongoose.Schema;
@@ -22,6 +23,10 @@ const UserSchema = new Schema({
   },
   password: {
     type: String,
+    required: true
+  },
+  phone: {
+    type: Number,
     required: true
   }
 }, {timestamps: true});

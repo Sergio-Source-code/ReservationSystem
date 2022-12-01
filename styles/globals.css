@@ -197,7 +197,7 @@ footer {
 /* Reservation Page Styling */
 .reservation_page {
   height: 80vh;
-  background-image: url('/img/Booking-Background.jpg');
+  background-image: url('https://static.wixstatic.com/media/f286e9_ba22c0671d27467f8c964937c3bc9da8~mv2_d_5683_3789_s_4_2.jpg/v1/fill/w_880,h_588,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f286e9_ba22c0671d27467f8c964937c3bc9da8~mv2_d_5683_3789_s_4_2.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -211,14 +211,13 @@ footer {
 }
 
 #reservation_form {
-  height: 50%;
-  width: 25%;
   background-color: bisque;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 15px;
   border-radius: 7px;
+  border: 5px solid black;
 }
 
 #user_alert_for_registration {
@@ -241,6 +240,14 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url('https://static.wixstatic.com/media/f286e9_ba2416c5623a40938109ff0b4608ba49~mv2.jpg/v1/fill/w_557,h_629,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f286e9_ba2416c5623a40938109ff0b4608ba49~mv2.jpg');
+  background-size: cover;
+}
+
+.menu_page h1 {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  color: white;
 }
 
 #menu {
@@ -253,44 +260,161 @@ footer {
     "image_two entrees"
     "sides image_three"
     "image_four desserts";
+  padding: 5px;
+  margin: 25px;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+#menu h2, #menu ol {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #appetizers {
   grid-area: appetizers;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #entrees {
   grid-area: entrees;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #sides {
   grid-area: sides;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #desserts {
   grid-area: desserts;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #image_one_right_container {
   grid-area: image_one;
   position: relative;
-  justify-self: flex-start;
 }
 
 #image_two_left_container {
   grid-area: image_two;
   position: relative;
-  justify-self: flex-end;
 }
 
 #image_three_right_container {
   grid-area: image_three;
   position: relative;
-  justify-self: flex-start;
 }
 
 #image_four_left_container {
   grid-area: image_four;
   position: relative;
-  justify-self: flex-end;
+}
+
+/* Careers Page Styling */
+.career_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/img/Tiles.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.career_panel {
+  width: 40%;
+  margin: 20px;
+}
+
+.career_card {
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+  background-color: antiquewhite;
+}
+
+.career_card h3, .career_card h4 {
+  margin: 1px;
+}
+
+/* About Us Styling */
+.about_us_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://static.wixstatic.com/media/f286e9_7ac216d357ef4d30b935ceebf3e2f68b~mv2_d_7360_4912_s_4_2.jpg/v1/fill/w_883,h_586,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f286e9_7ac216d357ef4d30b935ceebf3e2f68b~mv2_d_7360_4912_s_4_2.jpg');
+  background-size: cover;
+  height: 75vh;
+}
+
+#about_us_and_award_strip_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+#about_us {
+  width: 80%;
+  border-width: 5px 5px 0px 5px;
+  border-color: black;
+  padding: 10px;
+  border-style: solid;
+  background-color: white;
+}
+
+#award_strip {
+  width: 100vw;
+  height: 17vh;
+  position: relative;
+  background-color: #bd2333;
+}
+
+#closing_brackets {
+  margin-bottom: 2vh;
+  height: 4vh;
+  width: 80%;
+  border-width: 0px 5px 5px 5px;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Sign In Page Styling */
+.sign_in_page {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("https://static.wixstatic.com/media/f286e9_acfab150365c45b9b4a148104ab51b23~mv2.jpg/v1/fill/w_1903,h_807,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f286e9_acfab150365c45b9b4a148104ab51b23~mv2.jpg");
+}
+
+#sign_up_form {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  border-radius: 7px;
+  border: 5px solid black;
+  padding: 10px;
 }

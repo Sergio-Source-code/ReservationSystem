@@ -40,7 +40,7 @@ export default function NavigationBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href = "/careers_at_resturant_name">
+                        <Link href = "/careers_at_royal_kitchen">
                             <button> Careers </button>
                         </Link>
                     </li>
