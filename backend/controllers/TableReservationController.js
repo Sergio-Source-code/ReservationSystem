@@ -21,6 +21,13 @@ const createReservation = async (req, res) => {
       $lt: endOfDay
     }})
     const reservedTableIds = reservedTables.map(entry => {return entry.tableNumber;})
+    const isHighTrafficDay = reservedTableIds.size() > 3;
+    // if (isHighTrafficDay && !userApproved) {
+      //send response that will trigger front end popup about high traffic/surcharge
+      //when prompt gets approved request comes back with additional field where user is approved.
+    // }
+    // Approved user will be allowed to continue reservation.
+
     const table = await Table.findOne({id: { $nin: reservedTableIds}, size: { $gt: reservation.numberOfGuests }});
     if (table) {
       reservation.tableNumber = table.id;
