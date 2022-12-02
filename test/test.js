@@ -13,44 +13,58 @@ describe("Reservation Tests", () => {
     });
         
     describe( "User Tests", () => {
-        beforeEach(() => {
-        });
-        
-        it("User created successfully", async () => {
+        it("Check User firstName", async () => {
             User.create({firstName: 'Bob', lastName: 'Baker', email: 'bbaker@uh.edu', password: 'password', phone: 2222222222}).then((response) => {
-                expect(response).equal({firstName: 'bob', lastName: 'Baker', email: 'bbaker@uh.edu', password: 'password', phone: 2222222222});
+                expect(response.firstName).equal('Bob');
                 done();
             })
         });
 
-        it("Check user api", () => {
-            assert.equal(2*3, 6);
+        it("Check User lastName", async () => {
+            User.create({firstName: 'Bob', lastName: 'Baker', email: 'bbaker@uh.edu', password: 'password', phone: 2222222222}).then((response) => {
+                expect(response.lastName).equal('Baker');
+                done();
+            })
         });
+
+        it("Check User email", async () => {
+            User.create({firstName: 'Bob', lastName: 'Baker', email: 'bbaker@uh.edu', password: 'password', phone: 2222222222}).then((response) => {
+                expect(response.email).equal('bbaker@uh.edu');
+                done();
+            })
+        });
+
+        it("Check User password", async () => {
+            User.create({firstName: 'Bob', lastName: 'Baker', email: 'bbaker@uh.edu', password: 'password', phone: 2222222222}).then((response) => {
+                expect(response.password).equal('password');
+                done();
+            })
+        });
+
+        it("Check User phone", async () => {
+            User.create({firstName: 'Bob', lastName: 'Baker', email: 'bbaker@uh.edu', password: 'password', phone: 2222222222}).then((response) => {
+                expect(response.phone).equal(2222222222);
+                done();
+            })
+        });
+
     });
 
     describe("Reservation Tests", () => {
-        beforeEach(() => {
-        });
-        
-        it("Reservation created successfully", () => {
+        it("Check reservation numberOfGuests", async () => {
             var currentDate = Date.now();
             Reservation.create({firstName: 'Sergio', lastName: 'Sanz', email: 'ssanz@uh.edu', numberOfGuests: 2, phoneNumber: 2812812812, tableNumber: 1, date: currentDate}).then((response) => {
-                expect(response).equal({firstName: 'Sergio', lastName: 'Sanz', email: 'ssanz@uh.edu', numberOfGuests: 2, phoneNumber: 2812812812, tableNumber: 1, date: currentDate});
+                expect(response.numberOfGuests).equal(2);
                 done();
             })
         });
 
-        it("Check reservation api", () => {
-            // fetch('http://localhost:4000/api/reservations', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({}),
-            // })
-            // .then(response => {
-            //     expect(response.statusCode).equal(200);
-            // })
+        it("Check reservation tableNumber", async () => {
+            var currentDate = Date.now();
+            Reservation.create({firstName: 'Sergio', lastName: 'Sanz', email: 'ssanz@uh.edu', numberOfGuests: 2, phoneNumber: 2812812812, tableNumber: 1, date: currentDate}).then((response) => {
+                expect(response.tableNumber).equal(1);
+                done();
+            })
         });
     });
 });
