@@ -4,7 +4,7 @@
 const express = require('express');
 
 // Import the Controllers:
-const { createReservation } = require('../controllers/TableReservationController.js');
+const { createReservation, getHighTraffic } = require('../controllers/TableReservationController.js');
 
 // Models to Import:
 const TableReservation = require('../models/reservation.js');
@@ -14,6 +14,9 @@ const tableReservationRouter = express.Router();
 
 // Register/Post a Reservation:
 tableReservationRouter.post('/', createReservation);
+
+// get if high traffic day
+tableReservationRouter.post('/traffic', getHighTraffic)
 
 // Get all Registrations:
 

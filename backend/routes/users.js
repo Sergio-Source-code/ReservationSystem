@@ -4,7 +4,7 @@
 const express = require('express');
 
 // Import the Controllers:
-const { createUser } = require('../controllers/UserController.js');
+const { createUser, getUser } = require('../controllers/UserController.js');
 
 // Models to Import:
 const User = require('../models/user.js');
@@ -18,6 +18,7 @@ userRouter.post('/', createUser);
 // Get all users:
 
 // Get a specific user:
+userRouter.get('/', getUser);
 
 // Export Users
 module.exports = userRouter;

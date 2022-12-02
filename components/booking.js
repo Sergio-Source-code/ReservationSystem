@@ -26,6 +26,23 @@ export const Booking = () => {
     resolver: yupResolver(schema),
   });
 
+  const popup = (data) => {
+    fetch('http://localhost:4000/api/reservations/traffic', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({date: data}),
+    })
+    .then(response => {
+      if (response.status == 200){
+        console.log("Display popup");
+        alert('This is a high traffic day, are you sure you want to reserve?\nThere is a $50 no-show fee');
+      } else {
+      }
+    })
+  }
+
   const onSubmit = (data) => {
     fetch('http://localhost:4000/api/reservations', {
       method: 'POST',
@@ -46,6 +63,11 @@ export const Booking = () => {
   const [startDate, setStartDate] = useState(new Date());
   
   return (
+    <div>
+    {/* <div id="popup" style={{position: 'absolute', 'height': '100px', 'width': '100px', 'background-color': 'red'}}>
+      <p style={{'align-items': 'center'}}>Popup text</p>
+    </div> */}
+
     <form onSubmit={handleSubmit(onSubmit)}>
       <input type='text' placeholder='First' {...register('firstName')} />
       <p>{errors.firstName?.message}</p>
@@ -57,9 +79,10 @@ export const Booking = () => {
       <p>{errors.phoneNumber?.message}</p>
       <input type='text' placeholder='# of guests' {...register('numberOfGuests')} />
       <p>{errors.numberOfGuests?.message}</p>
-      <div> <DatePicker selected={startDate} onChange= {(date) => setStartDate(date)} />
+      <div> <DatePicker selected={startDate} onChange= {(date) => {popup(date); setStartDate(date)}} />
       </div> 
       <input type='submit'/>
     </form>
+    </div>
   )
 };

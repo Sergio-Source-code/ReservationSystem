@@ -25,7 +25,7 @@ export default function NavigationBar() {
             <div id = "side_navigations">
                 <ul>
                     <li>
-                        <Link href = "/reserve_a_seat">
+                        <Link href = "/book">
                             <button> Reserve a Table </button>                  
                         </Link>
                     </li>
@@ -40,7 +40,7 @@ export default function NavigationBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href = "/careers_at_resturant_name">
+                        <Link href = "/careers_at_royal_kitchen">
                             <button> Careers </button>
                         </Link>
                     </li>

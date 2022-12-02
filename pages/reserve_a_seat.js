@@ -12,6 +12,7 @@ export default function ReserveASeat() {
   // Local Variables:
   var string = "<select name = 'number_of_guests' required>";
   var isSignIn = false;
+  const [disabledState, setDisabledState] = useState(true); 
   
   // Local Functions:
   const outputNumberOfGuestFunction = () => {
@@ -30,11 +31,35 @@ export default function ReserveASeat() {
           <input type = 'radio' name = 'sign_in_or_not' value = 'yes' />
           <label for = 'sign_in_yes'> No </label>
           <input type = 'radio' name = 'sign_in_or_not' value = 'no' />
-          <input type = 'submit'></input>
+          <input type = 'submit'> Continue &#62; </input>
         </fieldset>
       </div>
     )
   } // Template to prompt user to sign in.
+  const onSubmit = (data) => {
+    // Fetch post route via endpoint:
+    fetch('http://localhost:4000/api/reservations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => {
+      if (response.status == 200){
+        console.log("Table reserved!")
+      } else {
+        console.log("Reservation failed");
+      }
+    })
+  }; // Function to handle submiting the form.
+  const enabledSubmit = () => {
+    if(disabledState === true) {
+      setDisabledState(false);
+    } else {
+      setDisabledState(true);
+    }
+  }; // Enable submit button if checked and disabled if unchecked.
 
   return (
     <main className="main_class reservation_page">
@@ -55,7 +80,10 @@ export default function ReserveASeat() {
             <input type = "date" name = "date" required />
             <label for = "time"> Desired Reservation Time: </label>
             <input type = "time" name = "time" value="08:30:00" step = "1800" required />
-            <input type = "radio" />
+            <details><summary>No Show Policy</summary> Clients would be charged $50 for a no-show fee. </details>
+            <label for = "no_show_policy"> I've read the no-show policy! </label>
+            <input type = "checkbox" name = "no_show_policy" onClick={enabledSubmit}/>
+            <input type = "submit" value = "Submit" disabled={disabledState}></input>
         </form>
     </main>
   )

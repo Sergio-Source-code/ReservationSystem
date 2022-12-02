@@ -25,12 +25,15 @@ export default function OurMenu() {
                             Cajun Flavored Nachoes
                         </li>
                         <li>
-                            Tex Mex Fried Gator Bites Served with Queso, Sour Creame, Cilantro, and with our proprietary Gator dip.
+                            Tex Mex Fried Gator Bites
                         </li>
                         <li>
                             Oysters
                         </li>
                     </ol>
+                </div>
+                <div id = "image_one_right_container">
+                    <Image src = '/img/Menu_Pictures/Gator_Bites_2.png' layout = 'fill' objectFit='contain'/>
                 </div>
                 <div id = "entrees">
                     <h2> Entrées </h2>
@@ -61,8 +64,8 @@ export default function OurMenu() {
                         </li>
                     </ol>
                 </div>
-                <div id = "image_three_right_container">
-                    <Image src = '/img/Oysters with Naan.png' layout = 'fill' objectFit = 'contain' />
+                <div id = "image_two_left_container">
+                    <Image src = '/img/Menu_Pictures/Banh_Mi_Po_Boy.png' layout = 'fill' objectFit = 'contain' />
                 </div>
                 <div id = "sides">
                     <h2> Sides </h2>
@@ -81,8 +84,8 @@ export default function OurMenu() {
                         </li>
                     </ol>
                 </div>
-                <div id = "image_four_left_container">
-                    <Image src = '/img/Oysters with Naan.png' layout = 'fill' />
+                <div id = "image_three_right_container">
+                    <Image src = '/img/Menu_Pictures/Fries.jpg' layout = 'fill' objectFit = 'contain'/>
                 </div>
                 <div id = "desserts">
                     <h2> Desserts: </h2> 
@@ -100,6 +103,9 @@ export default function OurMenu() {
                             Crème Brûlée and Icecream Scoop
                         </li>
                     </ol>
+                </div>
+                <div id = "image_four_left_container">
+                    <Image src = '/img/Menu_Pictures/Creme_Brulee.jpg' layout = 'fill' objectFit = 'contain'/>
                 </div>
             </div>
         </main>
