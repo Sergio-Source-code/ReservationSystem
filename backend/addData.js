@@ -37,4 +37,10 @@ Reservation.create({firstName: 'Kenneth', lastName: 'Dang', email: 'kennethpd@gm
 Reservation.create({firstName: 'Alice', lastName: 'Bailey', email: 'abailey@uh.edu', numberOfGuests: 4, phoneNumber: 1111111111, tableNumber: 4, date: Date.now()}).then((a, b) => a.save());
 Reservation.create({firstName: 'Bob', lastName: 'Baker', email: 'bbaker@uh.edu', numberOfGuests: 6, phoneNumber: 2222222222, tableNumber: 8, date: Date.now()}).then((a, b) => a.save());
 
+var christmas = new Date('2022-12-25');
+Reservation.create({firstName: 'John', lastName: 'Nguyen', email: 'jnguyen@uh.edu', numberOfGuests: 2, phoneNumber: 3333333333, tableNumber: 1, date: christmas}).then((a, b) => a.save());
+Reservation.create({firstName: 'Jeffry', lastName: 'Musk', email: 'jmusk@uh.edu', numberOfGuests: 2, phoneNumber: 4444444444, tableNumber: 2, date: christmas}).then((a, b) => a.save());
+Reservation.create({firstName: 'Sarah', lastName: 'Bezos', email: 'sbezos@uh.edu', numberOfGuests: 2, phoneNumber: 5555555555, tableNumber: 3, date: christmas}).then((a, b) => a.save());
+Reservation.create({firstName: 'Emily', lastName: 'Scott', email: 'escott@uh.edu', numberOfGuests: 2, phoneNumber: 6666666666, tableNumber: 4, date: christmas}).then((a, b) => a.save());
+
 console.log("Done");
