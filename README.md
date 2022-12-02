@@ -2,6 +2,29 @@
 
 As required in your Fundamentals of Software Engineering class (COSC 4351), you are to design a dining reservation web application. Hence, the creation of this repository. This project consists of three individuals. We'll be using Next JS for our front-end and MongoDB (or Firebase) as our query language. 
 
+## Note to our instructional teacher assistant and grader:
+To run our code, please run the dependencies in the `.init` folder. If that doesn't work, you can run as follows. First, create a next application via:
+```
+npx create-next-app
+```
+Then, install html parser by:
+```
+npm install react-html-parser
+```
+Then you can view front-end as:
+```
+npm run dev
+```
+
+To view backend, open a terminal and do:
+```
+cd backend
+```
+Then with node package manager run `npm install` on `dotenv` (to hide our DB URI and private stuff), `mongoose`, `express`, `nodemon`. And finally you can run the backend via:
+```
+nodemon server.js
+```
+
 ## Cloning the Repository:
 
 Cloning the repository is how you take the contents of the code here and place it in your Visual Studio Editor. To do so, start visual studios. Then, on the left hand side, click *Clone Git Repository*:
