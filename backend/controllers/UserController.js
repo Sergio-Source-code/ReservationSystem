@@ -11,11 +11,23 @@ const getAllUser = async (req, res) => {
     return users;
 };
 
+const getUser = async (req, res) => {
+    try {
+        User.find(res).then((user, error) => {
+            if (user) {
+                console.log("Found user " + user);
+                return res.status(200).send(user);
+            }
+        })
+        throw Error("User not found");
+    } catch (error) {
+        return res.status(400).json({error: error.message});
+    }
+}
+
 // Create a new user:
 const createUser = async (req, res) => {
     // Unpack body of request:
-
-
     try {
         const user = await User.create(req.body);
         const createdUser = await user.save();
@@ -28,5 +40,6 @@ const createUser = async (req, res) => {
 
 // Export Functions:
 module.exports = {
-    createUser
+    createUser,
+    getUser
 }
